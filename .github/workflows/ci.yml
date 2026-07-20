@@ -1,0 +1,34 @@
+name: CI - SalesWeb
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  DOTNET_VERSION: "8.0.x"
+  SOLUTION_PATH: "SalesWebMVC.sln"
+
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restaurar dependencias
+        run: dotnet restore ${{ env.SOLUTION_PATH }}
+
+      - name: Compilar
+        run: dotnet build ${{ env.SOLUTION_PATH }} --no-restore --configuration Release
+
+      - name: Executar testes
+        run: dotnet test ${{ env.SOLUTION_PATH }} --no-build --configuration Release
