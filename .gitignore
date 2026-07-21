@@ -427,3 +427,12 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+# ASP.NET Core settings with sensitive data
+
+appsettings.json
+appsettings.*.json
+
+# Environment variables
+
+.env
+.env.*
