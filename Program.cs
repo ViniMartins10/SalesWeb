@@ -1,8 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SalesWebMVC.Data;
+using SalesWebMVC.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<SeedingService>();
+builder.Services.AddScoped<SellerService>();
 builder.Services.AddDbContext<SalesWebMVCContext>(options =>
     {
         options.UseMySQL(builder.Configuration.GetConnectionString("DataBase"));
