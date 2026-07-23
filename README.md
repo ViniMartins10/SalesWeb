@@ -14,5 +14,8 @@ Este projeto possui uma pipeline de integracao continua com GitHub Actions que e
 
 A pipeline roda a cada push ou pull request para a branch `main`.
 
+##  Aprendizados
 
+Projeto desenvolvido para praticar ASP.NET Core MVC, Entity Framework Core,
+MySQL e boas práticas de desenvolvimento com C#.
 Projeto feito e desenvolvido por Vinicius Martins.
