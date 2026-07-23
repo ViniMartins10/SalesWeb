@@ -13,3 +13,6 @@ Este projeto possui uma pipeline de integracao continua com GitHub Actions que e
 - execucao de testes.
 
 A pipeline roda a cada push ou pull request para a branch `main`.
+
+
+Projeto feito e desenvolvido por Vinicius Martins.
