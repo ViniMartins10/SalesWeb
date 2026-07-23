@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SalesWebMVC.Services;
 using SalesWebMVC.Models;
+using SalesWebMVC.Models.ViewModels;
 
 namespace SalesWebMVC.Controllers
 {
@@ -24,10 +25,10 @@ namespace SalesWebMVC.Controllers
         public IActionResult Create()
         {
             var departments = _departmentService.FindAll();
+            var ViewModel = new SellerFormViewModel {Departments = departments };
+            //ViewData["Departments"] = departments;
 
-            ViewData["Departments"] = departments;
-
-            return View();
+            return View(ViewModel);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
