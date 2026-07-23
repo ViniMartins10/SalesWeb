@@ -6,6 +6,7 @@ using SalesWebMVC.Services;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<SeedingService>();
 builder.Services.AddScoped<SellerService>();
+builder.Services.AddScoped<DepartmentService>();
 builder.Services.AddDbContext<SalesWebMVCContext>(options =>
     {
         options.UseMySQL(builder.Configuration.GetConnectionString("DataBase"));
