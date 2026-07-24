@@ -1,5 +1,6 @@
 ﻿using SalesWebMVC.Data;
 using SalesWebMVC.Models;
+using System.Diagnostics.Metrics;
 namespace SalesWebMVC.Services
 {
     public class SellerService
@@ -20,5 +21,16 @@ namespace SalesWebMVC.Services
             _context.Add(obj);
             _context.SaveChanges();
         }
+        public Seller FindById(int id)
+        {
+            return _context.Seller.FirstOrDefault(obj => obj.Id == id);
+        }
+        public void Remove(int id)
+        {
+            Seller obj = FindById(id);
+            _context.Seller.Remove(obj);
+            _context.SaveChanges();
+        }
+            
     }
 }
