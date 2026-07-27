@@ -1,5 +1,6 @@
 ﻿using SalesWebMVC.Models;
 using SalesWebMVC.Models.Enums;
+
 namespace SalesWebMVC.Data
 {
     public class SeedingService
