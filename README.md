@@ -18,4 +18,5 @@ A pipeline roda a cada push ou pull request para a branch `main`.
 
 Projeto desenvolvido para praticar ASP.NET Core MVC, Entity Framework Core,
 MySQL e boas práticas de desenvolvimento com C#.
+Padrão MVC e seguindos os conceitos SOLID
 Projeto feito e desenvolvido por Vinicius Martins.
